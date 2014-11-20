@@ -1,11 +1,15 @@
 \documentclass[10pt,letterpaper,titlepage]{article}
+
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\author{Equipo 3}
+
+\author{Gabriel Pérez Mendoza\\
+Abraham Toriz Cruz\\
+\textbf{Equipo 3}}
 \title{Problemas 4 y 5}
 
 \begin{document}
@@ -290,24 +294,29 @@ Es decir, el conjunto de puntos de equilibrio de (\ref{eq:system}) es el siguien
 	\{(n \pi, 0) | n \in \mathbb{Z}\}
 \end{equation}
 
-\subsection{An\'alisis de estabilidad}
+\subsection{Análisis de estabilidad}
 Puesto que el sistema (3) es NO-lineal, tomaremos la matriz jacobiana del sistema y posteriormente evaluaremos los puntos de equilibrio en ella para as\'i saber el comportamiento de la soluci\'on en las regiones alrededor de los puntos de equilibrio.\\\\
 La matriz Jacobiana del sistema queda de la siguiente forma:
+
 \[
 	J(y_{1},y_{2}) = \begin{pmatrix}
 		0 & 1\\
 		-k \cos y_{1} & 0
 	\end{pmatrix}
 \]
+
 Aqu\'i, notamos que tenemos 2 casos a la hora de evaluar: cuando $y_{1}= 2l\pi, l \in \mathbb{Z}$ y $y_{1}= (2l+1)\pi, l \in \mathbb{Z}$\\\\
 Caso 1: Evaluando los puntos de equilibrio en J cuando tenemos $y_{1}= 2l\pi, l \in \mathbb{Z}$:
+
 \[
 	J((2n) \pi,0) = \begin{pmatrix}
 		0 & 1\\
 		-k & 0
 	\end{pmatrix}
 \]
+
 Resultando as\'i el polinomio caracter\'istico de $J$ en:
+
 \begin{equation}
 	P(\lambda) = \lambda ^{2} + k
 \end{equation}
@@ -376,5 +385,13 @@ Analizamos ahora las regiones alrededor del punto $(\pi,0)$, el cual es un punto
 		Como $\pi<y_{1}< 2\pi$, entonces $\sin y_{1} < 0$ y as\'i: $y_{2}' >0$.\\
 		Como $y_{2}<0$, entonces $y_{1}'<0$.
 \end{itemize}
+
+Los resultados anteriores se aprecian en la figura \ref{fig:flujo}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{flujo.png}
+	\caption{Flujo de las soluciones}
+	\label{fig:flujo}
+\end{figure}
 
 \end{document}
